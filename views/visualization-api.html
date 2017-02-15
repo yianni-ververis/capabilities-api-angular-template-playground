@@ -1,0 +1,29 @@
+
+<!-- 
+	Based on the Visualization API 
+ -->
+<div class="row">
+	<div class="col-md-12">
+		<visualization 
+			data-id="'visualizationBarChart'" 
+			data-title="'Great on-the-fly barchart'" 
+			data-type="'barchart'" 
+			data-columns="['Case Owner Group','=Avg([Case Duration Time])']" 
+			data-height="600">
+		</visualization>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Barchart <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li ng-repeat="type in types"><a ng-class="type==currentType?'active':''" ng-click="changeType(type)">{{type}}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="diagnobreakdown" style="height:400px"></div>
+</div>
